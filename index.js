@@ -55,7 +55,7 @@ app.get("/uptime", async (req, res) => {
     const uptimeHours = uptimeMs / (1000 * 60 * 60); // convert ms to hours
     const uptimeDecimal = parseFloat(uptimeHours.toFixed(2)); // round to 2 decimals
 
-    return res.send(uptimeDecimal);
+    return res.send('${uptimeDecimal}');
 
   } catch (err) {
     console.error(err.response?.data || err.message);
